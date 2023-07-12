@@ -22,10 +22,8 @@ struct FirstView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(keys, id: \.self) { key in
-                    Text(myDictionary[key] as! String)
-                }
+            List(keys, id: \.self) { key in
+                Text(myDictionary[key] as! String)
             }
             .toolbar {
                 // 全削除ボタン
